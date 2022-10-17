@@ -1,0 +1,153 @@
+<html>
+<head>
+<title>Atividade 4</title>
+</head>
+<body>
+<meta charset="utf-8">
+<style>
+div.title {
+text-align: center;
+font-family: Helvetica, Century Gothic, Consolas, Franklin Gothic;
+font-size: 18;
+position: relative;
+top: 10px;
+}
+
+div.p {
+text-align: left;
+font-family: Segoi UI, Tahoma, Arial;
+font-size: 12;
+position: relative;
+left: 10px;
+top: 20px;
+}
+
+p {
+font-size: 17px;
+}
+
+</style>
+
+<div class="title">
+<h1>Atividade 4: Parâmetros/atributos para o &lt;input&gt;</h1>
+<p>Por Samuel Carvalho</p>
+</div>
+
+<div class="p">
+<h2>Autocomplete:</h2>
+<p>Permite ao browser prever o valor a ser digitado com base em valores anteriores. Pode ser "setado" on (ligado, padrão) ou off (desligado)</p>
+
+<form>
+  <label for="nome">Primeiro nome (autocomplete off): </label>
+  <input type="text" id="nome" name="nome" autocomplete="off"><br>
+</form>
+
+<form>
+  <label for="nome">Primeiro nome (autocomplete on): </label>
+  <input type="text" id="nome" name="nome" autocomplete="on"><br>
+</form>
+
+<h2>Autofocus:</h2>
+<p>Torna o campo de input automaticamente focalizado quando a página carrega.</p>
+
+<form>
+  <label for="user">Usuário: </label>
+  <input type="text" id="user" name="user" autofocus><br>
+</form>
+
+<h2>Disabled:</h2>
+<p>Desativa o campo de input.</p>
+
+<form>
+  <label for="desativ">Desativado: </label>
+  <input type="text" id="desativ" name="desativ" disabled><br>
+</form>
+
+<h2>Max e min:</h2>
+<p>Determina o máximo e o mínimo de valores que podem ser aceitos no campo de input.
+<br>
+Funciona com os seguintes tipos de valores (types): number, range, date, datetime-local, month, time, week.
+</p>
+
+<form>
+  <label for="age">Idade: </label>
+  <input type="number" id="age" name="age" min="18" max="100"><br>
+</form>
+
+<h2>Maxlength:</h2>
+<p>Determina o número máximo de caracteres permitidos no campo de input.</p>
+
+  <label for="senha">Digite sua senha: </label>
+  <input type="text" id="senha" name="senha" maxlength="10">
+
+<h2>Name:</h2>
+<p>Determina o nome do elemento input. 
+<br>
+É usado para referenciar esse elemento em um javascript ou referenciar o dado do formulário depois de este ter sido enviado.</p>
+
+<h2>Pattern:</h2>
+<p>Determina um padrão de valor ao campo de input a ser comparado com o valor digitado e enviado pelo usuário.
+<br>
+Se o valor digitado não corresponder ao padrão especificado, o usuário não poderá prosseguir com o envio do formulário.</p>
+
+<form action="./action_form.html">
+  <label for="cpf">CPF:</label>
+  <input type="text" id="cpf" name="cpf" pattern="[0-9]{11}" title="É preciso ter 11 números"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Placeholder:</h2>
+<p>Mostra um exemplo de valor no campo de input.</p>
+
+<form action="./action_form.html">
+  <label for="cpf">CPF:</label>
+  <input type="text" id="cpf" name="cpf" pattern="[0-9]{11}" title="É preciso ter 11 números" placeholder="99999999999"><br><br>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Readonly</h2>
+<p>Torna o campo de input disponível apenas para leitura. O usuário não pode modificá-lo, mas pode selecionar e copiar o texto do formulário.</p>
+
+<form>
+  <label for="nome">Primeiro nome: </label>
+  <input type="text" id="nome" name="nome" value="Ana" readonly><br>
+  <label for ="idade">Idade: </label>
+  <input type="number" id="idade" name="idade" value="20" readonly>
+</form>
+
+<h2>Required:</h2>
+<p>Determina que para enviar o formulário é necessário preencher aquele campo.</p>
+
+<form>
+  <label for="pin">Digite sua senha PIN: </label>
+  <input type="password" id="pin" name="pin" size="4" maxlength="4" pattern="[0-9]+[0-9]+[0-9]+[0-9]" title="Apenas números, quatro dígitos." required>
+  <input type="submit" value="Enviar">
+</form>
+
+<h2>Size:</h2>
+<p>Especifica a largura visível, em caracteres, de um campo de input.</p>
+
+<form>
+<label for="pin">Digite sua senha PIN: </label>
+<input type="password" id="pin" name="pin" size="4" maxlength="4" pattern="[0-9]" title="Apenas números">
+<input type="submit" value="Enviar">
+</form>
+
+<h2>Type:</h2>
+<p>Determina o tipo de entrada (input) a ser utilizada.
+<br>
+Dentre os tipos de entrada temos: button (botão), checkbox (caixa de marcação), color (selecionar uma cor), date (data), datetime-local 
+(seleciona uma data e horário sem considerar fuso horário), email, file (arquivo), hidden (um campo invisível ao usuário, porém 
+visível e editável usando dev tools do navegador), image (imagem), month (mês), number, password, 
+radio (selecionar uma dentre a opções marcando a bolinha), range (seleciona um valor usando um slider), reset (retorna os valores do 
+formulário aos valores iniciais), search (funciona como um "text" mas usado para pesquisas), submit (envia o formulário), tel (telefone), 
+time (horário sem fuso horário), url (endereço URL), week (seleciona semana e ano).
+</p>
+
+<h2>Value:</h2>
+<p>Determina o valor do campo. Pode ser editado se não houver o atributo <strong>readonly</strong></p>
+&nbsp;
+</div>
+
+</body>
+</html
